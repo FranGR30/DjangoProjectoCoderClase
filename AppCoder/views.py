@@ -44,5 +44,5 @@ def buscar(request):
         cursos = Curso.objects.filter(camada = comision)
         return render(request,'AppCoder/inicio.html',{'cursos':cursos,'comision':comision})
     else:
-        respuesta = "No enviaste datos"
+        respuesta = "No enviaste dato/s"
     return render(request,'AppCoder/inicio.html',{'respuesta':respuesta})
