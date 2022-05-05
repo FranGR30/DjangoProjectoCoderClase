@@ -1,0 +1,14 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+<form action="{% url 'cursosFormulario' %}" method="POST">{% csrf_token %}
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type="submit" value="Enviar fomulario hecho en API">
+</form>
+
+{% endblock %}
