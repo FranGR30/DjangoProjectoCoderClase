@@ -8,13 +8,18 @@ class Curso (models.Model):
 class Estudiantes (models.Model):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
-    email = models.EmailField
+    email = models.EmailField()
+    def __str__(self):
+        return self.nombre+" "+self.apellido
 
 class Profesor (models.Model):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
-    email = models.EmailField
+    email = models.EmailField()
     profesion = models.CharField(max_length=30)
+    def __str__(self):
+        return self.nombre+" "+self.apellido
+
 
 class Entregables (models.Model):
     nombre = models.CharField(max_length=30)

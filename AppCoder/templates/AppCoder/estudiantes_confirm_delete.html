@@ -1,0 +1,12 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block ContenidoQueCambia %}
+
+<form method="POST">{% csrf_token %}
+    estas seguro que deseas borrar el estudiante "{{ object }}"?
+    <input type="submit" value="SI">
+</form>
+
+{% endblock %}
